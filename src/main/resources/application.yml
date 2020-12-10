@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    # test1数据库
+    test1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      jdbc-url: jdbc:mysql://47.100.137.41:3306/test1?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=false&allowMultiQueries=true
+      username: root
+      password: root
+
+    #test2数据库
+    test2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      jdbc-url: jdbc:mysql://47.100.137.41:3306/test2?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=false&allowMultiQueries=true
+      username: root
+      password: root
+
+  # 分布式锁
+  jta:
+    # log-dir: classpath*:tx-logs
+    transaction-manager-id: txManager
